@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom checkbox styling */
+.custom-checkbox {
+  @apply w-5 h-5 rounded border-2 border-gray-300 focus:ring-2 focus:ring-blue-500 focus:ring-offset-0 transition-all duration-200;
+}
+
+.custom-checkbox:checked {
+  @apply bg-blue-500 border-blue-500;
+}
+
+.dark .custom-checkbox {
+  @apply border-gray-600 bg-gray-700;
+}
+
+.dark .custom-checkbox:checked {
+  @apply bg-blue-600 border-blue-600;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 #f7fafc;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full hover:bg-gray-400;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 hover:bg-gray-500;
+} 
