@@ -124,6 +124,32 @@ If you want to run the application without Docker for development:
    cd server && npm start
    ```
 
+## Security
+
+This application implements several security measures:
+
+- **Input Validation**: All API endpoints validate and sanitize input data
+- **CORS Protection**: Properly configured cross-origin resource sharing
+- **Rate Limiting**: Protection against abuse with request limits
+- **Security Headers**: Enhanced security headers for XSS and clickjacking protection
+- **SQL Injection Protection**: Parameterized queries throughout
+- **Error Handling**: Secure error responses without information disclosure
+
+For detailed security information, see [SECURITY.md](SECURITY.md).
+
+## Environment Configuration
+
+For production deployment, copy `.env.example` to `.env` and configure:
+
+```bash
+cp .env.example .env
+```
+
+Key variables:
+- `NODE_ENV=production`
+- `ALLOWED_ORIGINS`: Your production domain(s)
+- `PORT`: Server port (default: 5000)
+
 ## License
 
 This project is open source and available under the MIT License. 
