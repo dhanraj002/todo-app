@@ -2,7 +2,7 @@
 FROM node:20-alpine AS frontend-build
 WORKDIR /app/client
 COPY client/package*.json ./
-RUN npm ci --only=production
+RUN npm install
 COPY client/ ./
 RUN npm run build
 
@@ -15,7 +15,7 @@ RUN adduser -S appuser -u 1001 -G appgroup
 
 WORKDIR /app/server
 COPY server/package*.json ./
-RUN npm ci --only=production
+RUN npm install --only=production
 
 COPY server/ ./
 
