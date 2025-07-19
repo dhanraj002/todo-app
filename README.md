@@ -90,6 +90,8 @@ The backend provides the following REST API endpoints:
 
 All task data is stored in a SQLite database located at `./data/todo.db`. This directory is mounted as a Docker volume, so your data persists between container restarts.
 
+**Note**: The `data/` folder is excluded from version control for security and privacy reasons. When you first run the application, it will automatically create the database and required tables.
+
 ## Development
 
 ### Project Structure
