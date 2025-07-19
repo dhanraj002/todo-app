@@ -15,8 +15,8 @@ client/dist/
 .env.test.local
 .env.production.local
 
-# Database files (optional - you may want to include the schema but not the data)
-# data/
+# Database files (exclude actual data)
+data/
 
 # IDE files
 .vscode/
